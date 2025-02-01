@@ -259,9 +259,10 @@ const App = () => {
 export default App
 ```
 
-HomeLayout.jsx
+**HomeLayout.jsx**
 
 ```js
+// children
 import { Outlet } from "react-router-dom"
 
 const HomeLayout = () => {

@@ -10,18 +10,23 @@ import {
   Products,
   Register,
   SingleProduct,
-} from "./pages"
+} from "./pages/hub"
 
+// import HomeLayout from "./pages/HomeLayout"
+
+//* react router dom
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
 const router = createBrowserRouter([
   {
     //@ parent element
     path: "/",
+    // element: <HomeLayout />,
     element: <HomeLayout />,
     errorElement: <Error />,
     children: [
       {
+        // render the Landing page
         index: true,
         element: <Landing />,
       },

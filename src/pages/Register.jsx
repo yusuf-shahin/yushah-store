@@ -1,9 +1,5 @@
 const Register = () => {
-  return (
-    <div>
-      <h1 className='text-4xl font-bold'>Register componemt</h1>
-    </div>
-  )
+  return <h1>Register form</h1>
 }
 
 export default Register
