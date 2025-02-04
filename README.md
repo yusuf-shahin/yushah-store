@@ -271,6 +271,7 @@ const HomeLayout = () => {
       <nav>
         <span className='text-4xl text-primary'>Comfy</span>
       </nav>
+      {/* This is necessary for nested routes to work */}
       <Outlet />
     </>
   )
@@ -399,7 +400,7 @@ FormInput.jsx
 ```js
 const FormInput = ({ label, name, type, defaultValue }) => {
   return (
-    <div className='form-control '>
+    <div className='form-control'>
       <label className='label'>
         <span className='label-text capitalize'>{label}</span>
       </label>
@@ -918,18 +919,20 @@ const [theme, setTheme] = useState(false)
 const handleTheme = () => {
   setTheme(!theme)
 }
-;<div className='navbar-end'>
-  <label className='swap swap-rotate '>
-    {/* this hidden checkbox controls the state */}
-    <input type='checkbox' onChange={handleTheme} />
+return (
+  <div className='navbar-end'>
+    <label className='swap swap-rotate '>
+      {/* this hidden checkbox controls the state */}
+      <input type='checkbox' onChange={handleTheme} />
 
-    {/* sun icon */}
-    <BsSunFill className='swap-on h-4 w-4' />
+      {/* sun icon */}
+      <BsSunFill className='swap-on h-4 w-4' />
 
-    {/* moon icon */}
-    <BsMoonFill className='swap-off h-4 w-4' />
-  </label>
-</div>
+      {/* moon icon */}
+      <BsMoonFill className='swap-off h-4 w-4' />
+    </label>
+  </div>
+)
 ```
 
 ## Challenge (14) - Set Themes

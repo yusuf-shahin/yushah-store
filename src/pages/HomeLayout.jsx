@@ -1,12 +1,17 @@
+import { SemanticUI } from "developer-icons"
 import { Outlet } from "react-router-dom"
+import { Header, Navbar } from "../components"
 
 const HomeLayout = () => {
   return (
     <div>
-      <nav>
-        <span className='text-4xl text-primary'>Comfy</span>
-      </nav>
-      <Outlet />
+      <Header />
+      <Navbar />
+      {/* This is necessary for nested routes to work */}
+      <section className='align-element py-20'>
+        <Outlet />
+        {/* First render the Landing component */}
+      </section>
     </div>
   )
 }
